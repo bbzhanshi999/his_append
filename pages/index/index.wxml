@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view >
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+       <image  src="logo.jpg" mode="cover" class="logo"></image>
+    </block>
+  </view>
+  <view class="appName">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view class="search">
+    <input  placeholder="输入病历号" class="searchInput"  bindinput="bindKeyInput" style="width:200rpx" />
+    <!-- <button bindtap="clickMe">测试</button> -->
+  </view>
+</view>

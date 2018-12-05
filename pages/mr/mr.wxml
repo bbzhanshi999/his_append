@@ -1,0 +1,47 @@
+<!--pages/mr/mr.wxml-->
+<view class="content">
+  <view class="title">基本信息</view>
+  <view>
+    <view>
+      <text class="basic-title">姓名：</text>
+      <text class="basic-text">{{mr.name}}</text>
+    </view>
+    <view>
+      <text class="basic-title">病历号：</text>
+      <text class="basic-text">{{mr.code}}</text>
+    </view>
+    <view>
+      <text class="basic-title">合同单位：</text>
+      <text class="basic-text">{{mr.contract}}</text>
+    </view>
+    <view>
+      <text class="basic-title">收费时间：</text>
+      <text class="basic-text">{{mr.updateTime}}</text>
+    </view>
+    <view>
+      <text class="basic-title">总金额：</text>
+      <text class="basic-text">{{mr.amount}}元</text>
+    </view>
+    <view>
+      <text class="basic-title">自费金额：</text>
+      <text class="basic-text">{{mr.selfPaying}}元</text>
+    </view>
+  </view>
+  <view class="title">药品信息</view>
+  <view class="table">
+    <view class="tr">
+      <view class="th">名称</view>
+      <view class="th">数量</view>
+      <view class="th">单位</view>
+      <view class="th">金额</view>
+      <view class="th">自费金额</view>
+    </view>
+    <view class="tr" wx:for="{{mr.drugInfoList}}">
+      <view class='td'> {{item.drugName}} </view>
+      <view class="td"> {{item.num}} </view>
+      <view class="td"> {{item.unit}} </view>
+      <view class="td"> {{item.amount}} </view>
+      <view class="td"> {{item.selfPaying}} </view>
+    </view>
+  </view>
+</view>
